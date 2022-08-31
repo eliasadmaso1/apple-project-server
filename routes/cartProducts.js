@@ -3,10 +3,10 @@ const Router = express.Router();
 const Controller = require('../controllers/cartProducts');
 const { verifyUser } = require('../middlewares/verifyToken');
 
-Router.get('/:userId',verifyUser, Controller.getProductsInCart);
-Router.post('/add',verifyUser, Controller.addProductToCart);
-Router.delete('/remove',verifyUser, Controller.removeCartProduct);
-Router.delete('/decrement',verifyUser, Controller.decrementCartProduct);
+Router.get('/:userId', Controller.getProductsInCart);
+Router.post('/add', Controller.addProductToCart);
+Router.delete('/remove', Controller.removeCartProduct);
+Router.delete('/decrement', Controller.decrementCartProduct);
 
 
 
