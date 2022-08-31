@@ -25,7 +25,7 @@ app.use('/product',productRouter);
 
 
 app.get('/', (req, res) => {
-    res.send('Api Running');
+    res.send('Api Running!');
   });
 
 app.listen(PORT,()=>{
